@@ -24,3 +24,16 @@ In cases where it cannot store locally, it will exclude the user from A/B testin
     console.log(chosen_config.image);      // either true or false
     console.log(chosen_config.thisorthat); // the index of the chosen config
 ```
+
+### Advanced Use-Case
+
+If you would like to change how the chosen object is modified, supply a "modify" function.
+
+```js
+    let overwriteModifer(obj, index) => {
+        obj["ab_test_index"] = (index == 1 ? "A" : "B");
+    }
+    chosen_config = thisorthat('my_app', [config_a, config_b], overwriteModifer);
+    
+    console.log(chosen_config.ab_test_index);      // either "A" or "B"
+```
