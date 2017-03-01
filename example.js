@@ -1,4 +1,4 @@
-let {thisorthat} = require ('main.js');
+let {thisorthat} = require ('thisorthat.js');
 
 let config_a = {
     min: 1,

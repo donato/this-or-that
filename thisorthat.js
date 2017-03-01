@@ -26,13 +26,13 @@ function choose(n) {
 }
 
 /*
-thisorthat
-A method to help A/B/...n test in javascript by choosing between n config objects
-and persisting it locally.
+ * thisorthat
+ * A method to help A/B/...n test in javascript by choosing between n config objects
+ * and persisting it locally.
 
-@param name: This is a key used when storing values. It's purpose is to allow you to use multiple thisorthat's on the same page
-@param arrConfs: Array of possible configurations
-@param modifier: Method which modifies the chosen object to include the specified index
+ * @param {string} name     - This is a key used when storing values. It's purpose is to allow you to use multiple thisorthat's on the same page
+ * @param {Array}  arrConfs - Array of possible configurations
+ * @param {Method} modifier - Method which modifies the chosen object to include the specified index
  */
 function thisorthat(name, arrConfs, modifier) {
     modifier = modifier || function defaultModifier(obj, idx) { obj['thisorthat'] = idx; };
